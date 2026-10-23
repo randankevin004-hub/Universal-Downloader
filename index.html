@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f7f4" />
+  <title>Universal Downloader</title>
+  <link rel="stylesheet" href="/ui/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="rail">
+      <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="rail-rule"></div>
+      <div class="rail-caption">MEDIA<br />TOOLS</div>
+      <div class="rail-bottom"><span class="rail-dot"></span><span>LOCAL APP</span></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="brand-name">UNIVERSAL <span>DOWNLOADER</span></div>
+        <div class="tool-status" id="toolStatus"><i class="status-dot"></i><span>Checking setup…</span></div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MEDIA, YOUR DEVICE</div>
+          <h1>Save a video.<br /><em>Keep it simple.</em></h1>
+          <p>Paste a link, choose a quality, and we’ll take care of the rest.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-disc"><div class="disc-hole"></div><div class="play-mark"></div></div>
+          <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✳</div>
+          <div class="art-label">READY<br />WHEN YOU ARE</div>
+        </div>
+      </section>
+
+      <section class="download-card" aria-labelledby="download-heading">
+        <div class="card-heading">
+          <div><div class="step-label">01 <span>START HERE</span></div><h2 id="download-heading">What would you like to save?</h2></div>
+          <div class="card-icon">↘</div>
+        </div>
+
+        <form id="downloadForm">
+          <label class="field-label" for="urlInput">VIDEO LINK</label>
+          <div class="url-field">
+            <span class="link-icon" aria-hidden="true">↗</span>
+            <input id="urlInput" type="url" placeholder="Paste a link from a supported site" autocomplete="url" required />
+            <button class="paste-button" id="pasteButton" type="button">PASTE</button>
+          </div>
+
+          <div class="options-row">
+            <div class="quality-block">
+              <label class="field-label" for="qualitySelect">VIDEO QUALITY</label>
+              <div class="select-wrap"><select id="qualitySelect">
+                <option value="best">Best available (recommended)</option>
+                <option value="1080">Up to 1080p</option>
+                <option value="720">Up to 720p</option>
+                <option value="480">Up to 480p</option>
+                <option value="360">Up to 360p</option>
+              </select><span class="select-arrow">⌄</span></div>
+              <div class="dependency-note hidden" id="ffmpegNote">For highest quality, install FFmpeg from <button id="ffmpegLink" type="button">the recommended Windows builds</button>.</div>
+            </div>
+            <div class="folder-block">
+              <div class="field-label">SAVE TO</div>
+              <button id="folderButton" class="folder-button" type="button"><span class="folder-glyph">▱</span><span id="folderText">Downloads</span><span class="folder-change">CHANGE</span></button>
+            </div>
+          </div>
+
+          <button id="downloadButton" class="primary-button" type="submit"><span class="button-symbol">↓</span><span id="buttonText">Download video</span><span class="button-arrow">↗</span></button>
+        </form>
+
+        <div class="progress-area hidden" id="progressArea">
+          <div class="progress-top"><span id="progressTitle">Getting things ready…</span><span id="progressPercent">0%</span></div>
+          <div class="progress-track"><div id="progressFill"></div></div>
+          <div class="progress-bottom"><span id="progressDetail">This can take a little while.</span><button id="cancelButton" type="button">CANCEL</button></div>
+        </div>
+
+        <div class="setup-panel hidden" id="setupPanel">
+          <div class="setup-mark">↓</div>
+          <div class="setup-copy"><strong>One quick setup first</strong><p>Allow this app to download its own latest yt-dlp from the official GitHub release. It will verify the download when GitHub provides a checksum, and keep it separate from any yt-dlp already on your PC.</p></div>
+          <button id="installButton" type="button">SET UP</button>
+        </div>
+        <div class="inline-error hidden" id="errorMessage" role="alert"></div>
+      </section>
+
+      <div class="bottom-grid">
+        <section class="note-card"><span class="note-icon">✦</span><div><strong>Made for everyday use</strong><p>Clear choices, no command line, no guesswork.</p></div></section>
+        <button class="open-folder-card" id="openFolderButton" type="button"><span class="folder-large">▱</span><span><strong>Open downloads</strong><small>See your saved videos</small></span><span class="open-arrow">↗</span></button>
+      </div>
+
+      <footer><span>UNIVERSAL DOWNLOADER <span class="footer-sep">/</span> RUNS ON YOUR DEVICE</span><span id="versionText">VERSION 1.0</span></footer>
+    </main>
+  </div>
+  <script type="module" src="/ui/app.js"></script>
+</body>
+</html>

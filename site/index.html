@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1219">
+    <meta name="description" content="A friendly Windows desktop app for yt-dlp. Paste a link, choose quality and save location, then download.">
+    <title>Universal Downloader for Windows</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Universal Downloader home">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M29 11h6v22l9-9 5 5-15 15-15-15 5-5 9 9V11Zm-15 39h36v5H14z"/></svg></span>
+        <span>Universal <span>Downloader</span></span>
+      </a>
+      <a class="top-link" href="#install">Install help <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> A SIMPLE DESKTOP APP FOR YT-DLP</div>
+          <h1>Downloads,<br><span>made simple.</span></h1>
+          <p class="intro">Paste a link, choose the quality and save location, then download. No terminal or command line to learn.</p>
+          <div class="download-row">
+            <a class="download-button" href="https://github.com/randankevin004-hub/Universal-Downloader/releases/latest/download/Universal-Downloader-Setup.exe" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3Zm-6 15h14v3H5v-3Z"/></svg>
+              <span><strong>Download for Windows</strong><small>Version 1.0.2 · 64-bit · about 3 MB</small></span>
+              <span class="download-arrow" aria-hidden="true">↓</span>
+            </a>
+            <p class="download-note">Free · Direct download · No account required</p>
+          </div>
+          <div class="trust-line"><span aria-hidden="true">✓</span> Windows 10 and 11 · Your downloads stay on your PC</div>
+        </div>
+
+        <div class="app-wrap" aria-label="Universal Downloader app preview">
+          <div class="glow"></div>
+          <div class="app-window">
+            <div class="window-bar"><span class="window-mark"><svg viewBox="0 0 64 64"><path d="M29 11h6v22l9-9 5 5-15 15-15-15 5-5 9 9V11Zm-15 39h36v5H14z"/></svg></span><b>Universal Downloader</b><span class="window-controls">−　□　×</span></div>
+            <div class="window-content">
+              <div class="welcome"><small>PASTE A VIDEO OR AUDIO LINK</small><h2>What would you like to save?</h2><p>Choose a link from a site supported by yt-dlp.</p></div>
+              <div class="input-label">VIDEO LINK</div>
+              <div class="input-box"><span>https://www.example.com/watch?v=…</span><b>Paste</b></div>
+              <div class="option-row"><div><small>VIDEO QUALITY</small><b>Best available</b></div><div><small>SAVE TO</small><b>Downloads <span>⌄</span></b></div></div>
+              <div class="save-button"><svg viewBox="0 0 24 24"><path d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3Zm-6 15h14v3H5v-3Z"/></svg> Download video</div>
+              <div class="status-row"><span class="status-dot"></span><span>Ready when you are</span><span class="status-check">✓</span></div>
+            </div>
+          </div>
+          <div class="float-tag"><span class="float-check">✓</span> No commands to type</div>
+        </div>
+      </section>
+
+      <section class="features" aria-label="App features">
+        <article><span class="feature-icon">⌕</span><div><h3>Just paste a link</h3><p>Start a download without learning command-line tools.</p></div></article>
+        <article><span class="feature-icon">▤</span><div><h3>Choose your quality</h3><p>Pick a quality and a folder that works for you.</p></div></article>
+        <article><span class="feature-icon">↻</span><div><h3>Finds yt-dlp for you</h3><p>Uses yt-dlp on your PC or offers to set up its own copy.</p></div></article>
+        <article><span class="feature-icon">▣</span><div><h3>Runs on your computer</h3><p>Downloads are saved directly to a folder on your PC.</p></div></article>
+      </section>
+
+      <section class="install" id="install">
+        <div class="install-title"><div class="eyebrow">UP AND RUNNING IN A MINUTE</div><h2>Install Universal Downloader</h2><p>The installer is small. On first launch, the app checks your PC for yt-dlp. If it cannot find one, you can allow it to download a separate copy from the official yt-dlp GitHub release.</p></div>
+        <ol class="steps">
+          <li><span>01</span><div><b>Download the installer</b><p>Choose <strong>Download for Windows</strong> above and wait for the .exe file to finish.</p></div></li>
+          <li><span>02</span><div><b>Run the setup file</b><p>Install for your Windows account. The installer does not need administrator access.</p></div></li>
+          <li><span>03</span><div><b>Check your tools</b><p>If yt-dlp is already on your PC, the app uses it. Otherwise, choose <strong>Set up</strong> to download the app's own copy. Internet access is needed for setup.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="notice">
+        <div class="notice-icon">i</div>
+        <div><h3>A note about FFmpeg and Windows</h3><p>FFmpeg is optional, but some separate audio and video streams need it to combine the files. Without FFmpeg, the app uses a combined format when the site offers one. Windows may show a SmartScreen warning because this installer is not code-signed.</p></div>
+      </section>
+
+      <footer>
+        <a class="brand footer-brand" href="#top"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M29 11h6v22l9-9 5 5-15 15-15-15 5-5 9 9V11Zm-15 39h36v5H14z"/></svg></span><span>Universal <span>Downloader</span></span></a>
+        <p>Downloads depend on the website and available formats. The app does not bypass DRM or access controls. Only download media you have permission to save.</p>
+        <a class="back-top" href="https://github.com/randankevin004-hub/Universal-Downloader">View source on GitHub ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>

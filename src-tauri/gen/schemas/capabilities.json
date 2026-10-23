@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Permissions needed for the downloader interface","local":true,"windows":["main"],"permissions":["core:default","dialog:allow-open","clipboard-manager:allow-read-text"]}}
